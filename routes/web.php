@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UpdateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * トップ
+ */
+Route::get('/', [IndexController::class, 'index'])->name('index');
+
+/**
+ * 更新履歴一覧
+ */
+Route::get('/updateLogList', [UpdateController::class, 'list'])->name('updateLogList');
+
+/**
+ * 更新履歴
+ */
+Route::get('/updateLog/{updateLogId}', [UpdateController::class, 'index'])->name('updateLog');

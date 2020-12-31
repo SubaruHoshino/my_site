@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NovelController;
 use App\Http\Controllers\UpdateController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,8 @@ Route::get('/updateLogList', [UpdateController::class, 'list'])->name('updateLog
  * 更新履歴
  */
 Route::get('/updateLog/{updateLogId}', [UpdateController::class, 'index'])->name('updateLog');
+
+/**
+ * 小説一覧
+ */
+Route::get('/novelList', [NovelController::class, 'list'])->name('novelList');

@@ -10,11 +10,7 @@
 </head>
 <body>
     <div class="ui top fixed teal inverted menu">
-        <a class="item" href="/">トップ</a>
-        <a class="item">はじめに</a>
-        <a class="active item" href="./novelMain.html">小説</a>
-        <a class="item">ツール</a>
-        <a class="item">外部リンク</a>
+        @include('components/menuItem')
     </div>
     <div class="ui main text container">
 @yield('breadcrumb')

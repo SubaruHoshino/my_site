@@ -35,3 +35,8 @@ Route::get('/updateLog/{updateLogId}', [UpdateController::class, 'index'])->name
  * 小説一覧
  */
 Route::get('/novelList', [NovelController::class, 'list'])->name('novelList');
+
+/**
+ * 小説
+ */
+Route::get('/novel/{novelId}', [NovelController::class, 'index'])->name('novel');

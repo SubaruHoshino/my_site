@@ -1,3 +1,6 @@
+@php
+    $currentPage = 'index';
+@endphp
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,10 +21,7 @@
         </h1>
     </header>
     <div class="ui teal inverted menu">
-        <a class="item">はじめに</a>
-        <a class="item">小説</a>
-        <a class="item">ツール</a>
-        <a class="item">外部リンク</a>
+        @include('components/menuItem')
     </div>
     <div class="ui main text container">
         <h2 class="ui top attached header">

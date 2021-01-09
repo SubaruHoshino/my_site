@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>追いかけて</title>
     <link rel="stylesheet" href="{{asset('/css/SemanticUI/semantic.css')}}"/>
+    <script src="{{asset('/js/jquery.js')}}"></script>
     <script src="{{asset('/css/SemanticUI/semantic.min.js')}}"></script>
 </head>
 <body>

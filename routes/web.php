@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\IndexController;
-use App\Http\Controllers\NovelController;
-use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\User\IndexController;
+use App\Http\Controllers\User\UpdateController;
+use App\Http\Controllers\User\NovelController;
 use Illuminate\Support\Facades\Route;
 
 /*

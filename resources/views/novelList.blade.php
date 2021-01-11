@@ -12,7 +12,7 @@
 @endsection
 
 @section('breadcrumb')
-{{ Breadcrumbs::render('novelList') }}
+{{ Breadcrumbs::render('novelList', null) }}
 @endsection
 
 @php
@@ -44,7 +44,11 @@ $firstFlag = true;
             <div class="description">{{$novel->description}}</div>
             <div class="list">
 @endif
-                <a class="item" href="{{route('novel', $novel->novel_id)}}">{{$novel->novel_title}}</a>
+                <a class="item" href="{{route('novel', $novel->novel_id)}}">{{$novel->novel_title}}<?php
+                    if ($novel->lock_id != 0) {
+                        echo ' <i class="lock icon teal"></i>';
+                    }
+                ?></a>
 @php
     $beforeId = $novel->title_id;
 @endphp

@@ -40,3 +40,8 @@ Route::get('/novelList', [NovelController::class, 'list'])->name('novelList');
  * 小説
  */
 Route::get('/novel/{novelId}', [NovelController::class, 'index'])->name('novel');
+
+/**
+ * 小説ロック解除処理
+ */
+Route::post('/novel/{novelId}', [NovelController::class, 'cancelLock'])->name('novel.cancelLock');

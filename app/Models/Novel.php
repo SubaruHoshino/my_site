@@ -10,10 +10,11 @@ class Novel extends Model
 {
     use HasFactory, SoftDeletes;
 
-    /**
-     * 小説タイトルを取得
-     */
     public function novelTitle() {
         return $this->belongsTo(NovelTitle::class);
+    }
+
+    public function lock() {
+        return $this->belongsTo(Lock::class);
     }
 }

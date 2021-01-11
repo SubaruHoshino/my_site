@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NovelType extends Model
+class Lock extends Model
 {
     use HasFactory;
 
-    public function novelTitle() {
-        return $this->hasMany(NovelTitle::class);
+    public function novel() {
+        return $this->hasMany(Novel::class);
     }
 }

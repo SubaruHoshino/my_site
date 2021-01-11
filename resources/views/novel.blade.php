@@ -9,7 +9,7 @@
 @endsection
 
 @section('script')
-<link  rel="stylesheet" href="{{asset('/css/novel.css')}}"/>
+<link rel="stylesheet" href="{{asset('/css/novel.css')}}"/>
 @endsection
 
 @section('breadcrumb')
@@ -44,7 +44,7 @@
         <button type="submit" class="ui primary button">入力</button>
     </p>
 @if ($lockError)
-    <p class="anchor">
+    <p class="ui error message">
         入力に誤りがあります
     </p>
 @endif

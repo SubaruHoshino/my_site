@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\FirstController;
 use App\Http\Controllers\User\IndexController;
 use App\Http\Controllers\User\UpdateController;
 use App\Http\Controllers\User\NovelController;
@@ -32,6 +33,11 @@ Route::get('/updateLogList', [UpdateController::class, 'list'])->name('updateLog
 Route::get('/updateLog/{updateLogId}', [UpdateController::class, 'index'])->name('updateLog');
 
 /**
+ * はじめに
+ */
+Route::get('/first', [FirstController::class, 'index'])->name('first');
+
+/**
  * 小説一覧
  */
 Route::get('/novelList', [NovelController::class, 'list'])->name('novelList');
@@ -45,3 +51,10 @@ Route::get('/novel/{novelId}', [NovelController::class, 'index'])->name('novel')
  * 小説ロック解除処理
  */
 Route::post('/novel/{novelId}', [NovelController::class, 'cancelLock'])->name('novel.cancelLock');
+
+/**
+ * 外部リンク
+ */
+Route::get('/link', function () {
+    return view('link');
+})->name('link');
